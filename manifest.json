@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Google搜索新标签页打开",
+  "version": "1.0",
+  "description": "让Google搜索结果在新标签页中打开",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/*",
+        "*://google.com/*",
+        "*://www.google.com.hk/*",
+        "*://google.com.hk/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Google搜索新标签页打开"
+  }
+} 
